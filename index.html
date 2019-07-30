@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메라메라카메라</title>
+    <style>
+  #myPanoViewer {
+    position: relative; /* 반드시 relative 혹은absolute 를 지정합니다.*/
+    width: 620px;
+    height: 420px;
+  }
+  </style>
+</head>
+
+<body>
+<div class="menubar">
+<ul>
+ <li><a href="#">Home</a></li>
+ <li><a href="#" id="current">Products</a>
+	<ul>
+     <li><a href="#">Sliders</a></li>
+     <li><a href="#">Galleries</a></li>
+     <li><a href="#">Apps</a></li>
+     <li><a href="#">Extensions</a></li>
+    </ul>
+ </li>
+ <li><a href="#">Company</a></li>
+ <li><a href="#">Address</a></li>
+</ul>
+</div>
+<style>
+    .menubar{
+border:none;
+border:0px;
+margin:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+
+.menubar ul{
+background: rgb(109,109,109);
+height:50px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background: rgb(109,109,109);
+color:#cccccc;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background: rgb(71,71,71);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: rgb(109,109,109);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width:200px;
+z-index:200;
+/*top:1em;
+/*left:0;*/
+}
+
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: rgb(109,109,109);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:200px;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+
+.menubar li ul a{
+display:block;
+height:50px;
+font-size:12px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: rgb(71,71,71);
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}</style>
+<div id="myPanoViewer"></div>
+<script src="view360.panoviewer.pkgd.min.js"></script>
+<script>
+// create PanoViewer with option
+var PanoViewer = eg.view360.PanoViewer;
+var container = document.getElementById("myPanoViewer");// 이미지가 표시될 영역(HTMLElement)
+
+var panoViewer = new PanoViewer(container, {
+            // projectionType 을 지정하지 않는 경우 기본값은 "equirectangular" 이다.
+            image: "https://raw.githubusercontent.com/g7199/haeryong/master/%EC%9A%B4%EB%8F%99%EC%9E%A5.JPG" // "equirectangular" 타입의 이미지를 지정한다.
+      }
+);
+</script>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://meramerakamera-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
+</body>
+</html>
